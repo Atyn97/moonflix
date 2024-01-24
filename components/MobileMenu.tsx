@@ -30,7 +30,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
           Movies
         </div>
 
-        {user ? (
+        {/* {user ? (
           <div
             onClick={() => router.push(`/favorites`)}
             className="px-3 text-center text-white hover:underline"
@@ -39,7 +39,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </div>
     </div>
   );

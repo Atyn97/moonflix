@@ -53,7 +53,7 @@ const Navbar = () => {
           <NavbarItem label="home" />
           {/* <NavbarItem label="series" /> */}
           <NavbarItem label="movies" />
-          {user ? <NavbarItem label="favorites" /> : ""}
+          {/* {user ? <NavbarItem label="favorites" /> : ""} */}
         </div>
         <div
           onClick={toggleMobileMenu}
