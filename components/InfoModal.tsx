@@ -110,7 +110,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
             </div>
           </div>
           <div className="px-12 py-9 ">
-            <p className="text-green-400 font-semibold text-lg mb-3">New</p>
+            <p className="text-yellow-400 font-semibold text-lg mb-3">New</p>
             <p className="text-neutral-400 text-lg font-semibold mb-3">
               {data?.duration}
             </p>
