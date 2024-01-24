@@ -5,6 +5,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { MdPlayDisabled, MdPlayArrow } from "react-icons/md";
 import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 interface MovieCardProps {
   data: Record<string, any>;
@@ -13,7 +14,7 @@ interface MovieCardProps {
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
   const { openModal } = useInfoModal();
-  const user = true;
+  const { data: user } = useCurrentUser();
 
   return (
     <div className=" group bg-zinc-900 col-span relative h-[24vw] md:h-[12vw] rounded-md">
@@ -124,7 +125,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
                 <MdPlayDisabled size={30} />
               </div>
             )}
-            {user ? <FavoriteButton movieId={data?.id} /> : ""}
+            <FavoriteButton movieId={data?.id} />
             <div
               onClick={() => openModal(data?.id)}
               className="

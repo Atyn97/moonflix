@@ -1,17 +1,15 @@
 import PlayButton from "./PlayButton";
 import useBillboard from "@/hooks/useBillboard";
+import useCurrentUser from "@/hooks/useCurrentUser";
 import useInfoModal from "@/hooks/useInfoModal";
 import { useRouter } from "next/router";
 
 const Billboard = () => {
   const { data } = useBillboard();
 
-  const router = useRouter();
-
   return (
     <div className="relative h-[46.25vw] ">
       <video
-        onClick={() => router.push(`/watch/${data?.id}`)}
         className="
         w-full
         h-[106.25vw]
@@ -33,7 +31,6 @@ const Billboard = () => {
           New <span className="text-white"> 2023</span>
         </p>
         <p
-          onClick={() => router.push(`/watch/${data?.id}`)}
           className="
         text-white
         text-3xl
@@ -68,10 +65,7 @@ const Billboard = () => {
         >
           {data?.description}
         </p>
-        <div
-          onClick={() => router.push(`/watch/${data?.id}`)}
-          className="hidden md:flex flex-row items-center mt-1 md:mt-4 gap-3"
-        >
+        <div className="hidden md:flex flex-row items-center mt-1 md:mt-4 gap-3">
           <PlayButton movieId={data?.id} />
         </div>
         <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">

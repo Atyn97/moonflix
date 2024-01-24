@@ -1,3 +1,4 @@
+import useCurrentUser from "@/hooks/useCurrentUser";
 import React from "react";
 
 import { AiOutlinePlus, AiOutlineCheck } from "react-icons/ai";
@@ -7,10 +8,13 @@ interface FavoriteButtonProps {
 }
 
 const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
+  const { data: user } = useCurrentUser();
+
   return (
     <div>
-      <button
-        className="
+      {user ? (
+        <button
+          className="
         cursor-pointer
         ml-auto 
         group/item 
@@ -26,9 +30,12 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
         items-center 
         transition 
       hover:border-white"
-      >
-        <AiOutlinePlus className="text-white" size={30} />
-      </button>
+        >
+          <AiOutlinePlus className="text-white" size={30} />
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
