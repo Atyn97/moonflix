@@ -24,7 +24,7 @@ const Billboard = () => {
         src={data?.videoUrl}
       ></video>
       <div className="absolute top-[50%] md:top-[30%] ml-4 md:ml-16">
-        <p className="text-yellow-400 font-semibold mt-3">
+        <p className="text-cyan-300 font-semibold mt-3">
           New <span className="text-white"> 2023</span>
         </p>
         <p

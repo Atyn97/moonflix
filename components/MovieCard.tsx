@@ -148,7 +148,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               <BiChevronDown className="text-white" size={30} />
             </div>
           </div>
-          <p className="text-yellow-400 font-semibold mt-2">
+          <p className="text-cyan-300 font-semibold mt-2">
             New <span className="text-white"> 2023</span>
           </p>
           <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">
