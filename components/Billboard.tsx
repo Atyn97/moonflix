@@ -1,4 +1,3 @@
-import { AiOutlineInfoCircle } from "react-icons/ai";
 import PlayButton from "./PlayButton";
 import useBillboard from "@/hooks/useBillboard";
 import useInfoModal from "@/hooks/useInfoModal";
@@ -19,11 +18,10 @@ const Billboard = () => {
         md:h-[46.25vw] 
         object-cover
         brightness-[60%]
-        
         "
         autoPlay
         loop
-        muted={isOpen ? true : false}
+        muted
         poster={data?.thumbnailUrl}
         src={data?.videoUrl}
       ></video>
