@@ -5,6 +5,7 @@ import PlayButton from "./PlayButton";
 import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
 import useMovie from "@/hooks/useMovie";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 interface InfoModalProps {
   visible?: boolean;
@@ -16,6 +17,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
 
   const { movieId } = useInfoModal();
   const { data = {} } = useMovie(movieId);
+  const { data: user } = useCurrentUser();
 
   useEffect(() => {
     setIsVisible(!!visible);
@@ -77,6 +79,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                 h-full"
               autoPlay
               loop
+              muted={user ? false : true}
               poster={data?.thumbnailUrl}
               src={data?.videoUrl}
             ></video>
