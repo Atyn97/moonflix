@@ -54,7 +54,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full fixed z-40 bg-gradient-to-b from-black  ...">
+    <nav className="w-full fixed z-40 bg-gradient-to-b from-zinc-900  ...">
       <div
         className={`px-4 md:px-12 py-2 flex flex-row items-center cursor-pointer gap-2 transiton duration-500 ${
           showBackground ? "bg-black bg-opacity-90" : ""

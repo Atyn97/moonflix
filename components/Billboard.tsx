@@ -14,8 +14,11 @@ const Billboard = () => {
         onClick={() => router.push(`/watch/${data?.id}`)}
         className="
         w-full
-        h-[66.25vw]
-        md:h-[46.25vw] 
+        h-[86.25vw]
+        sm:h-[86.25vw]
+        md:h-[66.25vw] 
+        lg:h-[66vw] 
+        xl:h-[56.25vw] 
         object-cover
         brightness-[60%]
         "
@@ -36,7 +39,7 @@ const Billboard = () => {
         text-3xl
         md:text-5xl
         h-full 
-        w-[90%]
+        w-[100%]
         md:w-[70%]
         lg:w-[80%]
         lg:text-6xl

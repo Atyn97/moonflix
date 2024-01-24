@@ -15,9 +15,23 @@ export default function Home() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
-      <div className="absolute top-[75%] bg-gradient-to-t from-black from-90% justify-between">
+      <div
+        className="
+          absolute
+          top-[25%]
+          xs:top-[40%]
+          sm:top-[35%]
+          md:top-[40%]
+          lg:top-[60%]
+          xl:top-[70%]
+          bg-gradient-to-t from-black from-90%
+          justify-between
+            "
+      >
         <MovieList data={movies} title="Trending now" />
-        <MovieList data={movies} title="All movies" />
+        <MovieList data={movies} title="Trending now" />
+        <MovieList data={movies} title="Trending now" />
+        <MovieList data={movies} title="Trending now" />
         <Footer />
       </div>
     </>
