@@ -6,13 +6,13 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
-  if (!visible) {
-    return null;
-  }
+  const router = useRouter();
 
   const user = true;
 
-  const router = useRouter();
+  if (!visible) {
+    return null;
+  }
 
   return (
     <div className="bg-black w-56 absolute top-16 left-20 py-5 flex-col border-2 border-gray-800 flex">
