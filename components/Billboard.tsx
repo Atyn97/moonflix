@@ -1,8 +1,5 @@
 import PlayButton from "./PlayButton";
 import useBillboard from "@/hooks/useBillboard";
-import useCurrentUser from "@/hooks/useCurrentUser";
-import useInfoModal from "@/hooks/useInfoModal";
-import { useRouter } from "next/router";
 
 const Billboard = () => {
   const { data } = useBillboard();
