@@ -18,6 +18,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   return (
     <div className="group bg-zinc-900 col-span relative h-[24vw] md:h-[12vw]">
       <img
+        onClick={() => router.push(`/watch/${data?.id}`)}
         className="
         cursor-pointer
         object-cover

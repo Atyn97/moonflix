@@ -5,13 +5,13 @@ import { useRouter } from "next/router";
 
 const Billboard = () => {
   const { data } = useBillboard();
-  const { isOpen } = useInfoModal();
 
   const router = useRouter();
 
   return (
     <div className="relative h-[46.25vw] ">
       <video
+        onClick={() => router.push(`/watch/${data?.id}`)}
         className="
         w-full
         h-[66.25vw]
@@ -30,6 +30,7 @@ const Billboard = () => {
           New <span className="text-white"> 2023</span>
         </p>
         <p
+          onClick={() => router.push(`/watch/${data?.id}`)}
           className="
         text-white
         text-3xl
