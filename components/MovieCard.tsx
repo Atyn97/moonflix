@@ -149,14 +149,13 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           <p className="text-yellow-400 font-semibold mt-2">
             New <span className="text-white"> 2023</span>
           </p>
-          <div className=" flex flex-row mt-2 gap-2 items-center">
-            <p className="text-zinc-400 text-sm font-semibold lg:text-md">
-              {data.duration}
+          <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">
+            <p className="text-zinc-300 text-sm font-semibold lg:text-lg">
+              {data?.duration}
             </p>
-          </div>
-          <div className=" flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white text-sm font-semibold lg:text-md">
-              {data.genre}
+            <p className="text-white text-sm font-semibold lg:text-lg">•</p>
+            <p className="text-white text-sm font-semibold lg:text-lg">
+              {data?.genre}
             </p>
           </div>
         </div>

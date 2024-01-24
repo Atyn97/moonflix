@@ -111,13 +111,16 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
           </div>
           <div className="px-12 py-9 ">
             <p className="text-yellow-400 font-semibold text-lg mb-3">New</p>
-            <p className="text-neutral-400 text-lg font-semibold mb-3">
-              {data?.duration}
-            </p>
-            <p className="text-white text-lg font-semibold mb-3">
-              {data?.genre}
-            </p>
-            <p className="text-white text-lg mb-3">{data?.description}</p>
+            <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">
+              <p className="text-zinc-300 text-sm font-semibold lg:text-lg">
+                {data?.duration}
+              </p>
+              <p className="text-white text-sm font-semibold lg:text-lg">•</p>
+              <p className="text-white text-sm font-semibold lg:text-lg">
+                {data?.genre}
+              </p>
+            </div>
+            <p className="text-white text-lg mb-3 mt-3">{data?.description}</p>
           </div>
         </div>
       </div>

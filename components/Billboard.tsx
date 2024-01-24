@@ -68,13 +68,11 @@ const Billboard = () => {
         >
           <PlayButton movieId={data?.id} />
         </div>
-
-        <div className="hidden lg:flex flex-row mt-2 gap-2 items-center">
-          <p className="text-zinc-400 text-sm font-semibold lg:text-lg">
+        <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">
+          <p className="text-zinc-300 text-sm font-semibold lg:text-lg">
             {data?.duration}
           </p>
-        </div>
-        <div className="hidden lg:flex flex-row mt-1 gap-2 items-center">
+          <p className="text-white text-sm font-semibold lg:text-lg">•</p>
           <p className="text-white text-sm font-semibold lg:text-lg">
             {data?.genre}
           </p>
