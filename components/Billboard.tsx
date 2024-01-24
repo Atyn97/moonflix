@@ -14,7 +14,7 @@ const Billboard = () => {
         onClick={() => router.push(`/watch/${data?.id}`)}
         className="
         w-full
-        h-[86.25vw]
+        h-[106.25vw]
         sm:h-[86.25vw]
         md:h-[66.25vw] 
         lg:h-[66vw] 

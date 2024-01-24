@@ -18,7 +18,7 @@ export default function Home() {
       <div
         className="
           absolute
-          top-[25%]
+          top-[35%]
           xs:top-[40%]
           sm:top-[35%]
           md:top-[40%]
