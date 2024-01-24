@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
 
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
@@ -7,10 +7,29 @@ import MobileMenu from "./MobileMenu";
 import NotificationMenu from "./NotificationMenu";
 import { useRouter } from "next/router";
 
+const TOP_OFFSET = 66;
+
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showNotificationMenu, setShowNotificationMenu] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > TOP_OFFSET) {
+        setShowBackground(true);
+      } else {
+        setShowBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const user = true;
 
@@ -35,8 +54,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full fixed z-40 bg-black">
-      <div className="px-4 md:px-12 py-2 flex flex-row items-center cursor-pointer">
+    <nav className="w-full fixed z-40 bg-gradient-to-b from-black  ...">
+      <div
+        className={`px-4 md:px-12 py-2 flex flex-row items-center cursor-pointer gap-2 transiton duration-500 ${
+          showBackground ? "bg-black bg-opacity-90" : ""
+        }`}
+      >
         <img
           onClick={() => router.push(`/`)}
           className="h-12 w-12"
