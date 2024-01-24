@@ -1,4 +1,5 @@
 import Billboard from "@/components/Billboard";
+import Footer from "@/components/Footer";
 import InfoModal from "@/components/InfoModal";
 import MovieList from "@/components/MovieList";
 import Navbar from "@/components/Navbar";
@@ -14,8 +15,10 @@ export default function Home() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
-      <div className="pb-40">
+      <div className="absolute top-[75%] bg-gradient-to-t from-black from-90% justify-between">
         <MovieList data={movies} title="Trending now" />
+        <MovieList data={movies} title="All movies" />
+        <Footer />
       </div>
     </>
   );

@@ -10,7 +10,7 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ label }) => {
 
   return (
     <div
-      onClick={() => router.push(`/${label}`)}
+      onClick={() => router.push(`/${label === "home" ? "/" : label}`)}
       className="text-white text-md cursor-pointer hover:text-gray-300"
     >
       {label}

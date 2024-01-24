@@ -41,7 +41,9 @@ const Billboard = () => {
         lg:w-[80%]
         lg:text-6xl
         font-bold
-        drop-shadow-xl"
+        drop-shadow-xl
+        cursor-pointer
+        "
         >
           {data?.title}
         </p>

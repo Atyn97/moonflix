@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import InfoModal from "@/components/InfoModal";
 import MovieList from "@/components/MovieList";
 import Navbar from "@/components/Navbar";
@@ -12,7 +13,7 @@ export default function Movie() {
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <div className="pt-24">
+      <div className="pt-32">
         <MovieList data={movies} title="All movies" />
       </div>
     </>
