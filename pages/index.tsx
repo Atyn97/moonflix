@@ -5,14 +5,8 @@ import MovieList from "@/components/MovieList";
 import Navbar from "@/components/Navbar";
 import useInfoModal from "@/hooks/useInfoModal";
 import useMovieList from "@/hooks/useMovieList";
-import { NextPageContext } from "next";
 import useFavorites from "@/hooks/useFavorites";
 
-export async function getServerSideProps(context: NextPageContext) {
-  return {
-    props: {},
-  };
-}
 export default function Home() {
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();

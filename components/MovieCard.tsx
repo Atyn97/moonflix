@@ -125,7 +125,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
                 <MdPlayDisabled size={30} />
               </div>
             )}
-            <FavoriteButton movieId={data?.id} />
+            {user ? <FavoriteButton movieId={data?.id} /> : ""}
             <div
               onClick={() => openModal(data?.id)}
               className="

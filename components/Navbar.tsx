@@ -6,6 +6,7 @@ import AccountMenu from "./AccountMenu";
 import MobileMenu from "./MobileMenu";
 import NotificationMenu from "./NotificationMenu";
 import { useRouter } from "next/router";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 const TOP_OFFSET = 66;
 
@@ -14,6 +15,8 @@ const Navbar = () => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showNotificationMenu, setShowNotificationMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+
+  const { data: user } = useCurrentUser();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +33,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const user = true;
 
   const router = useRouter();
 
