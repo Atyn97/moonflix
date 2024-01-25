@@ -6,6 +6,7 @@ import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
 import useMovie from "@/hooks/useMovie";
 import useCurrentUser from "@/hooks/useCurrentUser";
+import useUserModal from "@/hooks/useUserModal";
 
 interface InfoModalProps {
   visible?: boolean;
@@ -18,6 +19,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   const { movieId } = useInfoModal();
   const { data = {} } = useMovie(movieId);
   const { data: user } = useCurrentUser();
+  const { openIt } = useUserModal();
 
   useEffect(() => {
     setIsVisible(!!visible);
@@ -37,7 +39,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   return (
     <div
       className="
-        z-50
+        z-40
         transition
         duration-300
         bg-black
@@ -106,7 +108,10 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               <p className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
                 {data?.title}
               </p>
-              <div className="flex flex-row gap-4 items-center">
+              <div
+                onClick={openIt}
+                className="flex flex-row gap-4 items-center"
+              >
                 <PlayButton movieId={data?.id} />
                 {user ? <FavoriteButton movieId={data?.id} /> : ""}
               </div>

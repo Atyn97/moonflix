@@ -1,12 +1,21 @@
 import PlayButton from "./PlayButton";
 import useBillboard from "@/hooks/useBillboard";
+import useCurrentUser from "@/hooks/useCurrentUser";
+import useUserModal from "@/hooks/useUserModal";
+import { useRouter } from "next/router";
 
 const Billboard = () => {
+  const router = useRouter();
   const { data } = useBillboard();
+  const { data: user } = useCurrentUser();
+  const { openIt } = useUserModal();
 
   return (
     <div className="relative h-[46.25vw] ">
       <video
+        onClick={() => {
+          user ? router.push(`/watch/${data?.id}`) : openIt;
+        }}
         className="
         w-full
         h-[106.25vw]
@@ -16,6 +25,7 @@ const Billboard = () => {
         xl:h-[56.25vw] 
         object-cover
         brightness-[60%]
+        cursor-pointer
         "
         autoPlay
         loop
@@ -62,7 +72,10 @@ const Billboard = () => {
         >
           {data?.description}
         </p>
-        <div className="hidden md:flex flex-row items-center mt-1 md:mt-4 gap-3">
+        <div
+          onClick={openIt}
+          className="hidden md:flex flex-row items-center mt-1 md:mt-4 gap-3"
+        >
           <PlayButton movieId={data?.id} />
         </div>
         <div className="hidden lg:flex flex-row mt-2 gap-4 items-center">

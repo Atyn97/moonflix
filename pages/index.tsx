@@ -4,16 +4,22 @@ import InfoModal from "@/components/InfoModal";
 import MovieList from "@/components/MovieList";
 import Navbar from "@/components/Navbar";
 import useInfoModal from "@/hooks/useInfoModal";
+import useUserModal from "@/hooks/useUserModal";
 import useMovieList from "@/hooks/useMovieList";
 import useFavorites from "@/hooks/useFavorites";
+import UserModal from "@/components/UserModal";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 export default function Home() {
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();
   const { isOpen, closeModal } = useInfoModal();
+  const { open, closeIt } = useUserModal();
+  const { data: user } = useCurrentUser();
 
   return (
     <>
+      {!user && <UserModal visible={open} onClose={closeIt} />}
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />

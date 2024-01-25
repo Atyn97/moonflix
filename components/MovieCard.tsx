@@ -6,6 +6,7 @@ import { MdPlayDisabled, MdPlayArrow } from "react-icons/md";
 import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
 import useCurrentUser from "@/hooks/useCurrentUser";
+import useUserModal from "@/hooks/useUserModal";
 
 interface MovieCardProps {
   data: Record<string, any>;
@@ -15,11 +16,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
   const { openModal } = useInfoModal();
   const { data: user } = useCurrentUser();
+  const { openIt } = useUserModal();
 
   return (
     <div className=" group bg-zinc-900 col-span relative h-[24vw] md:h-[12vw] rounded-md">
       <img
-        onClick={() => router.push(`/watch/${data?.id}`)}
+        onClick={() => {
+          user && router.push(`/watch/${data?.id}`);
+        }}
         className="
         cursor-pointer
         object-cover
@@ -120,7 +124,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
                 transition
                 hover:bg-neutral-300
                  "
-                onClick={() => {}}
+                onClick={openIt}
               >
                 <MdPlayDisabled size={30} />
               </div>
