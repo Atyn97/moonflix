@@ -26,9 +26,11 @@ export default function Home() {
       <div
         className="
           absolute
+          w-full
+     
           top-[35%]
           xs:top-[40%]
-          sm:top-[35%]
+          sm:top-[50%]
           md:top-[60%]
           lg:top-[70%]
           xl:top-[80%]
