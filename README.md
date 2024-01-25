@@ -40,7 +40,7 @@ This project uses the following technologies:
 
 ### Demo Video
 
-![](https://github.com/Atyn97/moonflix/assets/123813011/cd96a322-cb74-48e9-be94-c7ab373770a6)
+![](https://github.com/Atyn97/moonflix/assets/123813011/cd96a322-cb74-48e9-be94-c7ab373770a6.mp4)
 
 ## Links
 
