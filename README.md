@@ -3,8 +3,6 @@ The Moonflix app is a stream service application that uses ReactJS, NextJS 14, T
 
 ## Table of contents
 
-## Table of contents
-
 - [Overview](#overview)
 - [My Process](#my-process)
 - [Features](#features)
