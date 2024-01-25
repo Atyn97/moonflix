@@ -47,7 +47,8 @@ const UserModal: React.FC<UserModalProps> = ({ visible, onClose }) => {
       <div
         className="
           relative
-          w-auto
+          w-[90%]
+          md:w-auto
           mx-auto
           max-w-3xl
           rounded-md
@@ -64,13 +65,13 @@ const UserModal: React.FC<UserModalProps> = ({ visible, onClose }) => {
           bg-zinc-900
           drop-shadow-md`}
         >
-          <div className="relative h-full w-full">
-            <div className="px-16 py-8">
+          <div className="relative h-full w-full items-center justify-center">
+            <div className="px-10 md:px-16 py-4 md:py-8">
               <h1
                 className="
                 text-white 
                 uppercase
-                text-md md:text-lg lg:text-xl 
+                text-sm md:text-lg lg:text-xl 
                 "
               >
                 Watch this movie and more on Moonflix
@@ -82,11 +83,11 @@ const UserModal: React.FC<UserModalProps> = ({ visible, onClose }) => {
                 flex-row
                 items-center 
                 bg-white/50
-                text-[10px] sm:text-lg md:text-xl
+                text-xs sm:text-lg md:text-xl
                 font-semibold
                 rounded-md
                 px-2 md:px-5
-                md:py-2
+                py-2 
                 hover:bg-neutral-300
                 "
                   onClick={() => router.push(`/`)}
@@ -99,11 +100,11 @@ const UserModal: React.FC<UserModalProps> = ({ visible, onClose }) => {
                 flex-row
                 items-center 
                 bg-cyan-300
-                text-[10px] sm:text-lg md:text-xl
+                text-xs sm:text-lg md:text-xl
                 font-semibold
                 rounded-md
                 px-2 md:px-5
-                md:py-2
+                py-2
                 hover:bg-cyan-500
                 "
                   onClick={() => signIn()}
@@ -112,7 +113,9 @@ const UserModal: React.FC<UserModalProps> = ({ visible, onClose }) => {
                 </button>
               </div>
               <div className="flex gap-1 items-center justify-center">
-                <p className="text-white">Already subscried? </p>
+                <p className="text-white text-sm md:text-lg lg:text-xl ">
+                  Already subscried?{" "}
+                </p>
                 <span
                   onClick={() => signIn()}
                   className="text-cyan-400 hover:text-cyan-500 cursor-pointer"

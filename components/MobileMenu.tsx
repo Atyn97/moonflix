@@ -1,3 +1,4 @@
+import useCurrentUser from "@/hooks/useCurrentUser";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -7,9 +8,7 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
   const router = useRouter();
-
-  const user = true;
-
+  const { data: user } = useCurrentUser();
   if (!visible) {
     return null;
   }

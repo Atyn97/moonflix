@@ -22,7 +22,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
     <div className=" group bg-zinc-900 col-span relative h-[24vw] md:h-[12vw] rounded-md">
       <img
         onClick={() => {
-          user && router.push(`/watch/${data?.id}`);
+          user ? router.push(`/watch/${data?.id}`) : openIt;
         }}
         className="
         cursor-pointer
@@ -61,6 +61,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           "
       >
         <img
+          onClick={() => {
+            user ? router.push(`/watch/${data?.id}`) : openIt;
+          }}
           className="
             cursor-pointer
             object-cover

@@ -69,7 +69,7 @@ const Navbar = () => {
         />
         <h1
           onClick={() => router.push(`/`)}
-          className="text-white font-bold text-md md:text-lg cursor-pointer"
+          className="hidden sm:flex text-white font-bold text-md md:text-lg cursor-pointer"
         >
           MOONFLIX
         </h1>
