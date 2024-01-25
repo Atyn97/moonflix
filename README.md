@@ -38,29 +38,9 @@ This project uses the following technologies:
 
 ## Screenshot
 
-### Slider
+### Demo Video
 
-![](./Calimero.png)
-
-### Featured Product
-
-![](./Calimero2.png)
-
-### Menu
-
-![](./Calimero5.png)
-
-### Customer's order / Admin dashboard
-
-![](./Calimero6.png)
-
-### Add Product Page
-
-![](./Calimero7.png)
-
-### Login Page
-
-![](./Calimero8.png)
+![](https://github.com/Atyn97/moonflix/assets/123813011/cd96a322-cb74-48e9-be94-c7ab373770a6)
 
 ## Links
 
