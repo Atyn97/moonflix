@@ -114,8 +114,8 @@ const Navbar = () => {
             onClick={toggleAccountMenu}
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
-            <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full overflow-hidden">
-              <img src="/images/user.png" alt="" />
+            <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden">
+              <img src="/images/new-astro.jpg" alt="" />
             </div>
             <BsChevronDown
               className={`text-white transition ${
